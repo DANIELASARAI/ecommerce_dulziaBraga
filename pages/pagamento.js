@@ -54,7 +54,6 @@ const StyledSmall = styled(Small)(({ theme, type }) => ({
       ? theme.palette.success.main
       : theme.palette.primary.main,
 }));
-
 const Pagamento = () => {
   const { totalPrice, totalQuantities, cartItems } = useStateContext();
   const [selectedFile, setSelectedFile] = useState(null);
@@ -63,6 +62,7 @@ const Pagamento = () => {
     current.getMonth() + 1
   }/${current.getFullYear()}`;
   console.log(date);
+  console.log(cartItems);
 
   const { name, address, nif, phone, postal, country, city, email } =
     localStorage;
@@ -142,7 +142,7 @@ const Pagamento = () => {
 
               <TableBody>
                 {cartItems.map((item) => (
-                  <TableRow>
+                  <TableRow key={item._id}>
                     <BodyTableCell>{item.name}</BodyTableCell>
                     <BodyTableCell>{item.quantity}</BodyTableCell>
                     <BodyTableCell>{item.price}</BodyTableCell>

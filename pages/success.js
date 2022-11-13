@@ -4,7 +4,7 @@ import { BsBagCheckFill } from "react-icons/bs";
 import { runConfetti } from "../lib/utils";
 import { useStateContext } from "../context/StateContext";
 
-const success = () => {
+const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
 
   useEffect(() => {
@@ -14,6 +14,7 @@ const success = () => {
     setTotalQuantities(0);
     runConfetti();
   }, []);
+
   return (
     <div className="success-wrapper">
       <div className="success">
@@ -38,4 +39,4 @@ const success = () => {
   );
 };
 
-export default success;
+export default Success;
