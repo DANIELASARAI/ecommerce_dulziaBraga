@@ -56,22 +56,19 @@ const StyledSmall = styled(Small)(({ theme, type }) => ({
 }));
 const Pagamento = () => {
   const { totalPrice, totalQuantities, cartItems } = useStateContext();
-  const [selectedFile, setSelectedFile] = useState(null);
+
   const current = new Date();
   const date = `${current.getDate()}/${
     current.getMonth() + 1
   }/${current.getFullYear()}`;
-  console.log(date);
-  console.log(cartItems);
 
-  const { name, address, nif, phone, postal, country, city, email } =
-    localStorage;
-  console.log(name);
-
-  const handleCapture = (e) => {
-    setSelectedFile(e.target.value);
-  };
-  console.log(selectedFile);
+  const name = localStorage.getItem("name");
+  const nif = localStorage.getItem("nif");
+  const postal = localStorage.getItem("postal");
+  const email = localStorage.getItem("email");
+  const address = localStorage.getItem("address");
+  const city = localStorage.getItem("city");
+  const country = localStorage.getItem("country");
 
   return (
     <Box pt={2} pb={4}>
@@ -100,7 +97,8 @@ const Pagamento = () => {
               <Stack spacing={0.5}>
                 <H6 fontSize={12}>Enviar a:</H6>
                 <H5>{name}</H5>
-                <H5>NIF:{nif}</H5>
+                <H5>{email}</H5>
+                <H5>NIF: {nif ? NIF : "N/A"}</H5>
                 <Tiny fontWeight={500} lineHeight={1.6}>
                   {city}, {postal} <br />
                   {address} <br />

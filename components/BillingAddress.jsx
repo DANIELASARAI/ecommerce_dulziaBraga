@@ -1,28 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button, Grid, RadioGroup, Stack, styled } from "@mui/material";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { Box } from "@mui/system";
-import AppCheckBox from "./AppCheckBox";
+
 import AppModal from "./AppModal";
 import AppRadio from "./AppRadio";
 import FlexBetween from "./flexbox/FlexBetween";
 import FlexBox from "./flexbox/FlexBox";
 import AppTextField from "./flexbox/input-fields/AppTextField";
-import { H5, H6, Small } from "./Typography";
+import { H5 } from "./Typography";
 import Add from "../icons/Add";
-import ChevronLeft from "../icons/ChevronLeft";
+
 import Shopping from "../icons/Shopping";
 import BillingAddressCard from "../page-sections/BillingAddressCard";
 import Heading from "../page-sections/Heading";
 import OrderSummery from "../page-sections/OrderSummery";
 import Stepper from "../page-sections/Stepper";
 import { useState } from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
-import { EmailClient } from "./EmailClient";
-import { Remove } from "@mui/icons-material";
-import Delete from "../icons/Delete";
 
-//import { useNavigate } from "react-router-dom"; //  styled components
+import { EmailClient } from "./EmailClient";
+
+import Delete from "../icons/Delete";
 
 const StyledFormControlLabel = styled(FormControlLabel)(() => ({
   "& .MuiTypography-root": {
