@@ -8,7 +8,6 @@ import {
   styled,
   TableRow,
 } from "@mui/material";
-import { useState } from "react";
 
 import React from "react";
 import Table from "@mui/material/Table";
@@ -22,6 +21,7 @@ import Link from "next/link";
 import { lightTheme } from "../constants";
 import { useStateContext } from "../context/StateContext";
 import Stepper from "../page-sections/Stepper";
+import BillingAddressCard from "../page-sections/BillingAddressCard";
 
 const HeadTableCell = styled(TableCell)(({ theme }) => ({
   padding: 0,
@@ -62,14 +62,6 @@ const Pagamento = () => {
     current.getMonth() + 1
   }/${current.getFullYear()}`;
 
-  const name = localStorage.getItem("name");
-  const nif = localStorage.getItem("nif");
-  const postal = localStorage.getItem("postal");
-  const email = localStorage.getItem("email");
-  const address = localStorage.getItem("address");
-  const city = localStorage.getItem("city");
-  const country = localStorage.getItem("country");
-
   return (
     <Box pt={2} pb={4}>
       <Box mt={3} maxWidth={700}>
@@ -83,30 +75,14 @@ const Pagamento = () => {
         <Grid container spacing={3}>
           <Grid item md={7} xs={12}>
             <FlexBetween>
-              <Box width={60}>
-                <img src="/static/logo/logo.svg" height="36px" alt="" />
-              </Box>
-
-              <Stack textAlign="right">
-                <H3>Sua Compra</H3>
-                <H6 fontSize={12}>Descriçao</H6>
+              <Stack textAlign="left">
+                <H3>Sua Compra:</H3>
               </Stack>
             </FlexBetween>
 
             <FlexBetween my={3}>
-              <Stack spacing={0.5}>
-                <H6 fontSize={12}>Enviar a:</H6>
-                <H5>{name}</H5>
-                <H5>{email}</H5>
-                <H5>NIF: {nif ? NIF : "N/A"}</H5>
-                <Tiny fontWeight={500} lineHeight={1.6}>
-                  {city}, {postal} <br />
-                  {address} <br />
-                  {country}
-                </Tiny>
-              </Stack>
-
-              <Tiny fontWeight={500} lineHeight={1.6} textAlign="right">
+              <Tiny fontWeight={500} lineHeight={1.6} textAlign="left">
+                Dulzia Braga <br />
                 R. Dom Gonçalo Pereira 55
                 <br /> Tel: 966 682 542 <br /> 4700-032, Braga <br /> Portugal
               </Tiny>

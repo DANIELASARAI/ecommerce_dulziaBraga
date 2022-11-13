@@ -1,14 +1,13 @@
-import { Box, Button, Card, IconButton } from "@mui/material";
+import { Box, Card } from "@mui/material";
 import FlexBox from "../components/flexbox/FlexBox";
-import { H6, Paragraph } from "../components/Typography";
-import CheckmarkCircle from "../icons/CheckmarkCircle";
+import { Paragraph } from "../components/Typography";
+
 import City from "../icons/City";
-import Delete from "../icons/Delete";
+
 import React from "react"; // -----------------------------------------------------
-import { DeleteForever } from "@mui/icons-material";
 
 // -----------------------------------------------------
-const BillingAddressCard = ({ selectedValue, values, setValues }) => {
+const BillingAddressCard = ({ selectedValue, values }) => {
   return (
     <>
       {values && (
