@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 import { useState } from "react";
-import { Send } from "@mui/icons-material";
+
 import React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -17,12 +17,11 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import FlexBetween from "../components/flexbox/FlexBetween";
 import { H3, H5, H6, Small, Span, Tiny } from "../components/Typography";
-import DownloadTo from "../icons/DownloadTo";
+
 import Link from "next/link";
 import { lightTheme } from "../constants";
 import { useStateContext } from "../context/StateContext";
 import Stepper from "../page-sections/Stepper";
-import emailjs from "@emailjs/browser";
 
 const HeadTableCell = styled(TableCell)(({ theme }) => ({
   padding: 0,
@@ -115,17 +114,6 @@ const Pagamento = () => {
               </Tiny>
             </FlexBetween>
 
-            {/*  <H6 mb={1} color="text.secondary">
-              Issue Date:{" "}
-              <Span
-                sx={{
-                  color: "text.primary",
-                  fontWeight: 500,
-                }}
-              >
-                03/10/2018
-              </Span>
-            </H6> */}
             <H6 color="text.secondary">
               Data:{" "}
               <Span
@@ -179,9 +167,6 @@ const Pagamento = () => {
             </Stack>
 
             <Stack direction="row" justifyContent="flex-end" mt={4} spacing={2}>
-              {/* <Button variant="outlined" startIcon={<DownloadTo />}>
-                PDF
-              </Button> */}
               <Button
                 size="small"
                 variant="outlined"
