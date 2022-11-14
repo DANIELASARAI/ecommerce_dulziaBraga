@@ -116,16 +116,12 @@ const Pagamento = () => {
 
               <TableBody>
                 {cartItems?.map((item) => (
-                  <div key={item._id}>
-                    <TableRow>
-                      <BodyTableCell>{item.name}</BodyTableCell>
-                      <BodyTableCell>{item.quantity}</BodyTableCell>
-                      <BodyTableCell>{item.price}</BodyTableCell>
-                      <BodyTableCell>
-                        {item.price * item.quantity}
-                      </BodyTableCell>
-                    </TableRow>
-                  </div>
+                  <TableRow key={item._id}>
+                    <BodyTableCell>{item.name}</BodyTableCell>
+                    <BodyTableCell>{item.quantity}</BodyTableCell>
+                    <BodyTableCell>{item.price}</BodyTableCell>
+                    <BodyTableCell>{item.price * item.quantity}</BodyTableCell>
+                  </TableRow>
                 ))}
               </TableBody>
             </Table>
