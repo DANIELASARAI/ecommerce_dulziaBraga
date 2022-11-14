@@ -55,7 +55,7 @@ export const StateContext = ({ children }) => {
       );
     }
 
-    toast.success(`${qty} ${product.name} added to the cart.`);
+    toast.success(`${qty} ${product.name} adicionado ao carrinho.`);
   };
 
   const onRemove = (product) => {
