@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         //C) Added customer to payment method types.
         payment_method_types: ["card" /* , "customer_balance" */],
         billing_address_collection: "required", // ''auto' Checkout will only collect the billing address when necessary.
-        shipping_options: [{ shipping_rate: "shr_1LsqnWHjmPVeHab7wyM2TU6y" }],
+        shipping_options: [{ shipping_rate: "shr_1M45RlHjmPVeHab7fLFhGGOB" }],
         locale: "pt",
         phone_number_collection: {
           enabled: true,
