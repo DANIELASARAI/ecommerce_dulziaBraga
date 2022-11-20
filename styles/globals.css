@@ -326,7 +326,7 @@ text-align: end;
   font-weight: 500;
   cursor: pointer;
   gap: 2px;
-  margin-left: 10px;
+  margin-left: 30px;
   border: none;
   background-color: transparent;
 }
@@ -388,8 +388,16 @@ padding: 10px 10px;
  justify-content:right;
 }
 .total h3{
-  font-size: 18px;
+  font-size: 15px;
 
+}
+.nif-message{
+  display: flex;
+ justify-content:right; 
+ margin-top: auto;
+
+ font-size: 18px;
+ font-style: italic;
 }
 .remove-item{
   font-size: 24px;
@@ -400,17 +408,18 @@ padding: 10px 10px;
 }
 .cart-bottom{
   position:relative;
-  bottom:80px;
+  bottom:70px;
   right: 5px;
   width: 100%;
 
 }
 
 .btn-container{
-  width: 450px;
+  width: 300px;
   display: flex; 
-  justify-content:space-around;
-  margin-top: 10px;
+  justify-content:right;
+  margin-bottom: 20px;
+
  
 
  
@@ -440,12 +449,13 @@ padding: 10px 10px;
 
 .btn{
   width: 80%;
-  max-width:130px;
+  max-width:100px;
   border-radius: 15px;
   border: none;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
   text-transform: uppercase;
   background-color:  #fc3468;
   color: #fff;
@@ -459,14 +469,14 @@ padding: 10px 10px;
 
 .btn-iban{
   width: 80%;
-  max-width:130px;
+  max-width:100px;
   padding: 10px 20px;
   border-radius: 15px;
   border: none;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
-  margin-top: 15px;
-
+  margin-top: 10px;
+  margin-right: 10px;
   text-transform: uppercase;
   background-color: #99b3ff;
   color: #fff;
@@ -761,7 +771,9 @@ margin-top: 160px;
   padding: 4px;
   }
   .cart-heading{
-    margin-top: 35px;
+    margin-top:20px;
+    padding-left: 100px;
+   
   }
   .product-container{
     margin-top: 10px;

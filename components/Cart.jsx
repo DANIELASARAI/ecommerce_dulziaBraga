@@ -53,7 +53,7 @@ const Cart = () => {
           onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span className="heading">Seu carrinho</span>
+          <span className="heading">Voltar</span>
           <span className="cart-num-items">({totalQuantities} items)</span>
         </button>
 
@@ -120,6 +120,7 @@ const Cart = () => {
           <div className="cart-bottom">
             <br></br>
             <br></br>
+
             <div className="total">
               <br></br>
               <br></br>
@@ -127,23 +128,14 @@ const Cart = () => {
 
               <h3>€ {totalPrice}</h3>
             </div>
-            <h6>
-              Se pretender faturar com NIF, clique em: Estou comprando como
-              empresa, no pago com Cartão.
-            </h6>
-
+            <div className="nif-message">
+              <h6>
+                Fatura com NIF: Clique Estou comprando
+                <br></br>
+                como empresa, no pago com Cartão.
+              </h6>
+            </div>
             <div className="btn-container">
-              {/*       <button
-                type="button"
-                className="btn-multibanco"
-                onClick={handleMultibanco}
-              >
-                Multibanco
-              </button>
-              <button type="button" className="btn-mbway" onClick={handleMBway}>
-                MB Way
-              </button> */}
-
               <Link href="/billing">
                 <button
                   type="button"
