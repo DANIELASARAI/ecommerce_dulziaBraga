@@ -1,11 +1,13 @@
+import { FcShop } from "react-icons/fc";
 export default {
   name: "product",
-  title: "Product",
+  title: "Producto",
   type: "document",
+  icon: FcShop,
   fields: [
     {
       name: "image",
-      title: "Image",
+      title: "Imagen",
       type: "array",
       of: [{ type: "image" }],
       options: {
@@ -14,7 +16,7 @@ export default {
     },
     {
       name: "name",
-      title: "Name",
+      title: "Nombre",
       type: "string",
     },
     {
@@ -27,13 +29,19 @@ export default {
       },
     },
     {
+      title: "Categoria",
+      name: "category",
+      type: "reference",
+      to: [{ type: "category" }],
+    },
+    {
       name: "price",
-      title: "Price",
+      title: "Precio",
       type: "number",
     },
     {
       name: "details",
-      title: "Details",
+      title: "Detalles",
       type: "string",
     },
   ],

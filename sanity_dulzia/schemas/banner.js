@@ -1,59 +1,42 @@
+import { FcDiploma1 } from "react-icons/fc";
 export default {
   name: "banner",
   title: "Banner",
   type: "document",
+  icon: FcDiploma1,
   fields: [
     {
       name: "image",
-      title: "Image",
+      title: "Imagen",
       type: "image",
       options: {
         hotspot: true,
       },
     },
-    {
-      name: "buttonText",
-      title: "ButtonText",
-      type: "string",
-    },
+
     {
       name: "product",
-      title: "Product",
+      title: "Producto",
       type: "string",
     },
     {
       name: "desc",
-      title: "Desc",
+      title: "Descripción",
       type: "string",
     },
     {
       name: "smallText",
-      title: "SmallText",
+      title: "Texto Pequeño",
       type: "string",
     },
     {
       name: "midText",
-      title: "MidText",
+      title: "Texto Medio",
       type: "string",
     },
     {
       name: "largeText1",
-      title: "LargeText1",
-      type: "string",
-    },
-    {
-      name: "largeText2",
-      title: "LargeText2",
-      type: "string",
-    },
-    {
-      name: "discount",
-      title: "Discount",
-      type: "string",
-    },
-    {
-      name: "saleTime",
-      title: "SaleTime",
+      title: "Texto Grande 1",
       type: "string",
     },
   ],
