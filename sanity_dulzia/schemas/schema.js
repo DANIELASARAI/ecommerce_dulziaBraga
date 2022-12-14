@@ -22,5 +22,3 @@ export default createSchema({
     category,
   ]),
 });
-
-console.log(footer);
