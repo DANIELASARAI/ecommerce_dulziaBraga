@@ -1,14 +1,13 @@
-import React from "react";
 import { groq } from "next-sanity";
+import React from "react";
+import { FooterBanner, HeroBanner, Product } from "../components";
+import { H2, H6 } from "../components/Typography";
 import { client } from "../lib/client";
-import { Product, FooterBanner, HeroBanner } from "../components";
-import { Small, H2, H6 } from "../components/Typography";
 
 import { TabContext, TabList } from "@mui/lab";
-import { Box, Grid, styled, Tab } from "@mui/material";
-import FlexBox from "../components/flexbox/FlexBox";
+import { Box, styled, Tab } from "@mui/material";
 import { useState } from "react";
-import category from "../sanity_dulzia/schemas/category";
+import FlexBox from "../components/flexbox/FlexBox";
 const StyledTabList = styled(TabList)(({ theme }) => ({
   "& .MuiTabs-flexContainer .MuiButtonBase-root": {
     marginLeft: 0,
@@ -74,7 +73,7 @@ const Home = ({ products, bannerData, footerData, categories }) => {
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
       <div className="products-heading">
-        <H2>Productos por Categorias</H2>
+        <H2>Produtos por Categorias</H2>
         <Box pt={2} pb={4}>
           <TabContext value={value}>
             <StyledTabList
