@@ -276,7 +276,7 @@ flex-direction: column;
 .footer-banner-image{
   position: absolute;
   top: 0%;
-  left:10%;
+  left:35%;
   width: 550px;
   height: 450px;
 }
@@ -737,7 +737,8 @@ margin-top: 160px;
     height: 40%;
     top: 10%;
     right: 6%;
-    left: 25%;
+    
+    
   }
   .banner-desc .left h3{
     font-weight: 900;
